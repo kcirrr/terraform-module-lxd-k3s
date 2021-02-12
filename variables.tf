@@ -29,6 +29,26 @@ variable "type" {
   default     = "virtual-machine"
 }
 
+variable "worker_disk_size" {
+  description = "Worker disk size"
+  default     = "20GB"
+}
+
+variable "worker_disk_pool" {
+  description = "Worker disk pool"
+  default     = "ssd"
+}
+
+variable "control_plane_disk_size" {
+  description = "Control plane disk size"
+  default     = "20GB"
+}
+
+variable "control_plane_disk_pool" {
+  description = "Control plane disk pool"
+  default     = "ssd"
+}
+
 variable "managed_fields" {
   type    = list(string)
   default = ["label", "taint"]

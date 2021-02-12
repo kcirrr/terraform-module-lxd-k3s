@@ -7,6 +7,16 @@ resource "lxd_container" "workers" {
   profiles  = var.profiles
   ephemeral = false
 
+  device {
+    name = "root"
+    type = "disk"
+    properties = {
+      path = "/"
+      pool = var.worker_disk_pool
+      size = var.worker_disk_size
+    }
+  }
+
   limits = {
     cpu    = var.worker_cpu_limit
     memory = var.worker_mem_limit
