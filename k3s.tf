@@ -24,7 +24,7 @@ module "k3s" {
         bastion_host : var.bastion_host != "" ? var.bastion_host : null
       }
       flags  = var.flags
-      taints = { "node.k3s.io/type" : var.number_of_workers == 0 ? "server:NoSchedule" : null }
+      taints = { "node.k3s.io/type" : var.number_of_workers != 0 ? "server:NoSchedule" : null }
     }
   }
 
