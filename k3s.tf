@@ -1,6 +1,6 @@
 module "k3s" {
   source      = "xunleii/k3s/module"
-  version     = "2.2.0"
+  version     = "2.2.3"
   depends_on_ = lxd_container.workers
 
   k3s_version = var.k3s_version
