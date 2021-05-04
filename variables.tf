@@ -66,7 +66,7 @@ variable "flags" {
 
 variable "k3s_version" {
   description = "K3s version"
-  default     = "latest"
+  default     = "stable"
 }
 
 variable "drain_timeout" {
